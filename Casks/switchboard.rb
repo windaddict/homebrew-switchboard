@@ -24,11 +24,12 @@ cask "switchboard" do
   artifact "com.movingavg.switchboard.sdPlugin",
            target: "#{Dir.home}/Library/Application Support/com.elgato.StreamDeck/Plugins/com.movingavg.switchboard.sdPlugin"
 
+  zap trash: "#{Dir.home}/Library/Application Support/" \
+             "com.elgato.StreamDeck/Plugins/com.movingavg.switchboard.sdPlugin"
+
   caveats <<~EOS
     Quit and relaunch the Stream Deck app to load Switchboard, then drag its
     actions onto your keys/dials. On first use macOS will ask for Accessibility
     and Automation permissions for Stream Deck — approve them.
   EOS
-
-  zap trash: "#{Dir.home}/Library/Application Support/com.elgato.StreamDeck/Plugins/com.movingavg.switchboard.sdPlugin"
 end
