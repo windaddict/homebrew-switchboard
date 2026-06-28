@@ -22,7 +22,8 @@ cask "switchboard" do
 
   # Install the self-contained plugin folder into the Stream Deck Plugins dir.
   artifact "com.movingavg.switchboard.sdPlugin",
-           target: "#{Dir.home}/Library/Application Support/com.elgato.StreamDeck/Plugins/com.movingavg.switchboard.sdPlugin"
+           target: "#{Dir.home}/Library/Application Support/" \
+                   "com.elgato.StreamDeck/Plugins/com.movingavg.switchboard.sdPlugin"
 
   zap trash: "#{Dir.home}/Library/Application Support/" \
              "com.elgato.StreamDeck/Plugins/com.movingavg.switchboard.sdPlugin"
